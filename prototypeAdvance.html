@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        Date.prototype.getWhichDay = function () {
+            console.log(this);
+            alert(this.valueOf())
+            switch (this.getDay()) {
+                case 1:
+                    alert("Monday")
+                    break;
+                case 2:
+                    alert("Monday")
+                    break;
+                case 3:
+                    alert("Monday")
+                    break;
+                default:
+                    alert("Monday")
+                    break;
+
+            }
+        }
+
+        let todayDate = new Date();
+        todayDate.getWhichDay();
+        let newDateOb = new Date()
+        newDateOb.getWhichDay();
+
+
+        let studentName = new String("Kavitha");
+        studentNameOne = "Kavitha";
+        String.prototype.getFirstLetter = function () {
+            alert(this[0])
+        }
+
+        studentName.getFirstLetter();
+        studentNameOne.getFirstLetter();
+
+        let no = new Number(12);
+        Number.prototype.isEven = function () {
+            if (this.valueOf % 2 === 0) {
+                alert("Even")
+            } else {
+                alert("Odd")
+            }
+        }
+        no.isEven()
+
+        let booleanVar = true;
+        Boolean.prototype.isTrue = function () {
+            if (this.valueOf() == true) {
+                alert("Is it true")
+            } else {
+                alert("It is false")
+            }
+        }
+        booleanVar.isTrue();
+
+        Object.prototype.showProperties = function () {
+            for (let index in this) {
+                console.log(index);
+                alert(this[index])
+            }
+        }
+
+        let studentOb = {
+            name: "Jaidev",
+            age: 22
+        }
+        studentOb.showProperties()
+    </script>
+</body>
+
+</html>

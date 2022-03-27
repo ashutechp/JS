@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function showUserDetails(msg, msgOne) {
+            console.log(this)
+            alert(msg)
+            alert(msgOne)
+        }
+
+        let studentOb = {
+            name: "Piyush",
+            age: 22
+        }
+
+        showUserDetails = showUserDetails.bind(studentOb)
+        showUserDetails("Hello", "Hi");
+        // In apply we can directly call rthe function. It doesnt return a function. and we can
+        // pass parameters an array
+
+        showUserDetails.apply(studentOb, ["Hello", "from Apply"])
+        // in call its same as apply with difference that parameters
+        // can be passed in comma separated values
+        showUserDetails.call(studentOb, "Hello", "from Apply")
+
+    </script>
+</body>
+
+</html>

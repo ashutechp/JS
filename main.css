@@ -1,0 +1,6 @@
+body{
+    background-color: blue;
+}
+.box{
+       background-image: url("cssPractice/facebk.png"), url("fcbk.png");
+}

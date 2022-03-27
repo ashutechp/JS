@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script>
+        class Car {
+            name;
+            model;
+            #chasisNo;
+            constructor(chasisNo, name, model) {
+                console.log("This function")
+                this.name = name;
+                this.model = model;
+                this.#chasisNo = chasisNo;
+            }
+
+            showCarModal() {
+                alert(`the car model is ${this.model}`)
+            }
+
+            showChasisNo() {
+                alert(`the chasisNo is ${this.#chasisNo}`);
+            }
+        }
+
+        Car.prototype.showName = function () {
+            alert(`from function showName and name value is ${this.name}`);
+        }
+
+        Car.prototype.a = 12;
+        let handaObject = new Car("chasis212", "Hondacity", 2022)
+        handaObject.showCarModel()
+        handaObject.showName()
+        alert(handaObject.a)
+    </script>
+</body>
+
+</html>
